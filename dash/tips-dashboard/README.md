@@ -6,6 +6,9 @@ Dash is a powerful tool to generate beautiful dashboards and gain insights. But 
 
 [https://maximuskarlson.herokuapp.com](https://maximuskarlson.herokuapp.com)
 
+User: JamesBond
+PW: 007
+
 To fullfill this task `heroku` offers an easy solution. You simply install the `heroku CLI` and watch how easy and fast your python application gets transformed into a flask application.
 
 This repository consists of four files and one virtual environment.
