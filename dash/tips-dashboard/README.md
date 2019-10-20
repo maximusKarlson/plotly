@@ -17,16 +17,16 @@ This repository consists of four files and one virtual environment.
 ## How to deploy the app
 1. First you need to sign up for [Heroku](www.heroku.com) and download the CLI.
 2. Install `virtualenv`. I'm a big anaconda fan and use it every day, but for this task `venv` suits better. The reason why we use virtual environments in general is, that the *requirements.txt* file needs to contain all the used libraries within the main program. `Venv` offers an easy solution:
-    ```python
+    ```bash
     pip freeze > requirements.txt
     ```
     creates exactly this file. Whenever the code gets changed or new libraries will be used you simply run this command again.
 3. Create a project folder:
-   ```python
+   ```bash
    mkdir my_cool_folder && cd
    ```
 4. Initialize an empty git repository:
-   ```python
+   ```bash
    git init
    ```
 
@@ -56,7 +56,7 @@ This repository consists of four files and one virtual environment.
    
    **.gitignore**: Just a file which prevents git from including the virtualenv folder to the commit files.
 
-    ```python
+    ```bash
     venv
     *.pyc
     .DS_Store
@@ -65,16 +65,16 @@ This repository consists of four files and one virtual environment.
 
    **Procfile**: A file used by [`gunicorn`](https://gunicorn.org)
 
-   ```python
+   ```bash
     web: gunicorn tips-dashboard:server
    ```
    `tips-dashboard` ​refers to the filename of our application (tips-dashboard.py) and​ server ​refers to the variable ​server​ inside that file.
 9. Create the current *requirements.txt* file:
-    ```python
+    ```bash
     pip freeze > requirements.txt
     ```
 10. Log into your heroku account and deploy your app
-    ```python
+    ```bash
     heroku login
 
     heroku create a-new-fancy-name
@@ -93,16 +93,16 @@ Congratulations - your app should be online now.
 ## Update your app
 
 If installing a new package:
-```python
+```bash
 $ ​pip install ​newdependency
 $ ​pip freeze > requirements.txt
 ```
 If updating an existing package:
-```python
+```bash
 $ ​pip install ​dependency​ --upgrade $ ​pip freeze > requirements.txt
 ```
 In all cases:
-```python
+```bash
 $ ​git status​ ​# view the changes (optional)
 $ ​git add .​ ​# add all the changes
 $ ​git commit -m ​"​a description of the changes​" $ ​git push heroku master
